@@ -3,8 +3,7 @@ public:
     int lengthOfLongestSubstring(string s) {
         set <char> window;
         int left = 0; 
-        int max_length;
-        if (s.empty()) return 0;
+        int max_length = 0;
         for (int i = 0; i < s.size(); i++){
             while (window.count(s[i])){
                 window.erase(s[left]);
